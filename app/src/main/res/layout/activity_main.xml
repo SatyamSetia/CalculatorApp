@@ -185,15 +185,15 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/dot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="?android:attr/buttonBarButtonStyle"
-                android:background="#ECEFF1"
-                android:text="."
-                android:textSize="20dp"
-                android:layout_weight="1"
-                android:onClick="dotClicked"/>
+            android:id="@+id/openBracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:background="#ECEFF1"
+            android:text="("
+            android:textSize="20dp"
+            android:layout_weight="1"
+            android:onClick="addOpenBracket"/>
 
             <Button
                 android:id="@+id/zero"
@@ -207,15 +207,15 @@
                 android:onClick="zeroClicked"/>
 
             <Button
-                android:id="@+id/bracket"
+                android:id="@+id/closeBracket"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="#ECEFF1"
-                android:text="( )"
+                android:text=")"
                 android:textSize="20dp"
                 android:layout_weight="1"
-                android:onClick="addBracket"/>
+                android:onClick="addCloseBracket"/>
 
             <Button
                 android:id="@+id/minus"
@@ -232,29 +232,38 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dot"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                style="?android:attr/buttonBarButtonStyle"
+                android:background="#ECEFF1"
+                android:text="."
+                android:textSize="20dp"
+                android:onClick="dotClicked"/>
 
             <Button
                 android:id="@+id/equal"
-                android:layout_width="match_parent"
+                android:layout_width="174dp"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="#ECEFF1"
                 android:text="="
                 android:textSize="20dp"
-                android:layout_weight="1"
                 android:onClick="findAnswer"/>
 
             <Button
                 android:id="@+id/delete"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 style="?android:attr/buttonBarButtonStyle"
                 android:background="#00BCD4"
                 android:textColor="#ffffff"
                 android:text="DEL"
                 android:textSize="20dp"
-                android:layout_weight="3"
                 android:onClick="deleteLast"/>
         </LinearLayout>
     </LinearLayout>
